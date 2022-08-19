@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color :red
+        }
+    .div {
+        font-size: 50px;
+        color: white;
+        margin: auto;
+        width: 500px;
+        height: 500px;
+        background-color: blue;
+    }
+    
+    .lark{
+        font-size: 50px;
+        color: white;
+        margin: auto;
+        width: 500px;
+        height: 500px;
+        background-color: purple
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    button{
+    
+        font-size: 34px;
+        font-weight: 700;
+        border-radius: 20px;
+        border: none;
+        padding: 20px 40px;
+        margin: 20px;
+        cursor: pointer;
+        background-color: lightblue;
+    }
+    </style>
+    
+</head>
+<body>
+
+<h1>hello world</h1>
+<div class="div">안녕하세요</div>
+<div class="btn">
+<button onclick="printBtn()">저는 버튼아닙니다 누르지말아주세요</button>
+</div>
+<div class="lark">나는 라크입니다</div>
+
+</body>
+
+<script>
+
+    const divbox = document.querySelector(".div")
+    console.log(divbox.innerText);
+
+    const larkbox = document.querySelector(".lark")
+    console.log(larkbox.innerText);
+    function printBtn() {
+        console.log("버튼을 눌렀다!");
+        larkbox.innerText = "나는 dive가 아니랍니다"
+        setTimeout(()=> {
+            larkbox.innerText = "저는 라크입니다";
+            alert("수업끝");
+        },1000);
+    }
+</script>
+</html>
